@@ -1,0 +1,115 @@
+.skillcard {
+    flex: 1 1 270px; 
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 30px;
+    background-color: #f5f5f5;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skillcard:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center; /* Vertically aligns icon and title */
+    justify-content: flex-start; /* Aligns them to the left */
+    gap: 10px; /* Space between the icon and the title */
+    margin-bottom: 10px;
+}
+
+.icon-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center; /* Vertically centers the icon in the container */
+    justify-content: center;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(360deg);
+}
+
+h3 {
+    font-family: Helvetica, sans-serif;
+    color: #565656 !important;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0; /* Removes any default margin */
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    color: #565656;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 991.98px) {
+
+    .skillcard:hover {
+        transform: none; /* Disable scaling on hover */
+        box-shadow: none; /* Disable box-shadow on hover */
+    }
+
+    .skillcard:hover {
+        transform: none !important;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2) !important;
+        background-color: #f5f5f5 !important;
+        border: none !important;
+        color: inherit !important;
+        transition: none !important;
+        filter: none !important;
+      }
+
+    .skillcard {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        transition: all 0s !important;
+    }
+    .skillcard.active{
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    .icon {
+        width: 40px;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .skillcard {
+        transition: all 0s !important;
+    }
+
+    .skillcard:hover {
+        transform: none !important;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2) !important;
+        background-color: #f5f5f5 !important;
+        border: none !important;
+        color: inherit !important;
+        transition: none !important;
+        filter: none !important;
+      }
+}
+

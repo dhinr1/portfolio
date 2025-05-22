@@ -1,0 +1,260 @@
+/* Hero container */
+.hero-container {
+  margin: 0;
+  background-color: #f5f5f5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  height: 100vh;
+  z-index: -2;
+  position: relative;
+}
+
+/* Background image */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 4s ease-in-out; /* Smooth fade */
+}
+
+/* Fades in */
+.fade-in {
+  opacity: 1;
+}
+
+/* Fades out */
+.fade-out {
+  opacity: 0;
+}
+
+
+/* Profile Image Container */
+.hero-image-container {
+  width: 40%;
+  z-index: 1; /* Ensure the profile image stays on top of the background */
+  padding-left: 70px;
+}
+
+/* Profile Image Styles */
+img {
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid white 10px;
+  width: 70%; /* Ensure the image fills its container */
+  min-width: 300px;
+  transition: transform 0.1s ease-in-out;
+}
+
+img:hover {
+  border: solid #1abc9c 10px;
+  transform: scale(1.03);
+}
+
+/* Hero Text */
+.hero-heading {
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 20px;
+  color: #1abc9c;
+  font-family: Helvetica, sans-serif;
+}
+
+.hero-subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #565656;
+  font-family: Helvetica, sans-serif;
+}
+
+.highlight {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  font-family: Helvetica, sans-serif !important;
+  color: #565656 !important;
+  transition: color 0.7s ease-in-out ;
+}
+
+.hero-subheading:hover .highlight {
+  color: #ff8a7f !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  font-family: Helvetica, sans-serif !important;
+}
+
+/* Buttons */
+.first-button {
+  background-color: #1abc9c;
+  border: solid #1abc9c 3px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-button:hover {
+  background-color: #4ed1b2;
+  border: solid #4ed1b2 3px;
+  transform: scale(1.1);
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.second-button {
+  border: solid #1abc9c 3px;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1abc9c;
+  transition: all 0.3s ease-in-out
+}
+
+.second-button:hover {
+  background-color: #4ed1b2;
+  border: solid #4ed1b2 3px;
+  transform: scale(1.1);
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 60%;
+  padding-left: 40px;
+  padding-right: 0px;
+  color: #565656;
+}
+
+
+/* ------------------------------------------------------CSS for responsiveness--------------------------------------------------------*/
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  .hero-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    z-index: 1; /* Ensure the profile image stays on top of the background */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-image-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid white 10px;
+    width: 70%; /* Ensure the image fills its container */
+    min-width: 250px;
+    transition: transform 0.1s ease-in-out;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .hero-container {
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .hero-image-container {
+    padding-top: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-image-trigger {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    width: 50%;
+  }
+
+  .hero-image-container,
+  .hero-text-container {
+    width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    margin-top: 0 !important;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+  .hero-subheading {
+    font-size: 1rem;
+  }
+
+  .highlight {
+    font-size: 1rem !important;
+  }
+
+  .highlight:hover {
+    all: unset !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    font-family: inherit !important;
+    transition: none !important;
+  }
+
+  .hero-subheading:hover .highlight {
+    color: #565656 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    font-family: Helvetica, sans-serif !important;
+  }
+  
+
+  .buttons-container {
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center; /* Center the buttons */
+    gap: 10px; /* Adjust the gap between buttons */
+    margin-bottom: 40px;
+  }
+
+  .first-button,
+  .second-button {
+    width: 100%; /* Make the buttons take up full width on small screens */
+    max-width: 300px; /* Optional: Limit the maximum width */
+  }
+}

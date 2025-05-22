@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Due Date Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-header">
+            Get personalized course dates:
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Your due date:</h5>
+            <!-- Form for selecting the due date -->
+            <form id="due-date-form" class="form-container">
+                <div class="date-select">
+                    <!-- Day Dropdown -->
+                    <select id="day" required>
+                        <option value="">Day</option>
+                    </select>
+
+                    <!-- Month Dropdown -->
+                    <select id="month" required>
+                        <option value="">Month</option>
+                    </select>
+
+                    <!-- Year Dropdown -->
+                    <select id="year" required>
+                        <option value="">Year</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="card-button">Get dates</button>
+            </form>
+            <div id="course-plan" class="course-plan"> </div>
+        </div>
+
+        <!-- This is where the personalized course plan will appear -->
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>

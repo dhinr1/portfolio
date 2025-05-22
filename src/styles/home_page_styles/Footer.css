@@ -1,0 +1,32 @@
+.footer-tag {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Distribute sections evenly */
+  align-items: end; /* Vertically center the sections */
+  background-color: #F5F5F5;
+  color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-evenly; /* Center content horizontally */
+  align-items: end; /* Center content vertically */
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-section p {
+  margin: 0;
+  line-height: normal;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #868686;
+}
+  

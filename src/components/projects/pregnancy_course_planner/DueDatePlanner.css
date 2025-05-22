@@ -1,0 +1,267 @@
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.card-container {
+    all: unset;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto; /* Centers the card in the available space */
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #c46464;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Spreads elements evenly */
+    width: 70%;
+    max-width: 700px;
+    min-width: 670px;
+    padding: 20px; /* Add padding to prevent text from touching edges */
+    background-color: #ccccb4;
+    border-radius: 25px; 
+    flex-wrap: wrap; /* Prevents overflow issues on smaller screens */
+}
+
+.card-title {
+    color: #444444;
+    width: 30%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.form-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-select {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+/* Custom styling for the select dropdowns */
+.date-select select {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 10px; 
+    border: 3px solid #ffffff; 
+    background-color: #f5f5f5; 
+    color: #444444; 
+    transition: all 0.3s ease; 
+  }
+  /* Hover effect for select fields */
+  .date-select select:hover {
+    background-color: #e0e0e0; 
+    border-color: #999; 
+  }
+  /* Focus effect for select fields */
+  .date-select select:focus {
+    outline: none; 
+    border-color: #444444; 
+    background-color: #ffffff;
+  }
+
+/* Custom styling for the button*/
+  .card-button {
+    white-space: nowrap; /* 👈 Prevents text from wrapping */
+    padding: 0.5rem 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #c46464; 
+    border: 3px solid #c46464;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; 
+}
+
+/* Hover effect for the button */
+.card-button:hover { 
+    border: 3px solid #444444; 
+    background-color: #aa5151;
+}
+
+/* Focus effect for the button */
+.card-button:focus {
+    outline: none; 
+    border-color: #444444; 
+    background-color: #c46464; 
+}
+
+.course-plan {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 20px;
+    height: 0;
+    padding: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: height 10s ease, margin-top 0.3s ease;
+}
+
+.course-plan.visible {
+    height: auto; /* Set the height to auto once visible */
+    padding: 10px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between; /* Distribute space between labels */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header-row p {
+    margin: 0;
+
+}
+
+.course-plan p {
+    color: #444444;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.all-courses {
+    display: flex;
+    flex-direction: column; /* Stack the courses vertically */
+}
+
+.all-courses p {
+    display: flex;
+    justify-content: space-between; /* Space out the course name and date */
+    padding: 2px; /* Add some padding between lines */
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+p.column-tag {
+    color: #444444 !important;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.all-courses p span {
+    flex-shrink: 0; /* Prevents the date from shrinking */
+    padding-right: 0;
+    text-align: right; /* Align date to the right */
+}
+
+.download-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-button {
+    background: none;           /* Remove background */
+    border: none;               /* Remove border */
+    margin-top: 10px;
+    padding: 0;                 /* Remove padding */
+    font: inherit;              /* Inherit the font style from the parent */
+    color: #c46464;             /* Link-like color */
+    cursor: pointer; 
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;          /* Change cursor to pointer to show it's clickable */
+}
+
+.download-button:hover {
+    color: #aa5151;             /* Darker blue on hover */
+    text-decoration: none;      /* Remove underline on hover */
+}
+
+
+/* Styling for smaller screens(below 768px) */
+@media (max-width: 767px) {
+    .card-header {
+        margin-bottom: 10px;
+    }
+    .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        max-width: 300px;
+        min-width: 290px;
+    }
+
+    .card-title {
+        display: flex;
+        
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .date-select {
+        margin-top: 5px;
+        margin-bottom: 13px;
+        font-size: 14px;
+        margin-left: 0%;
+    }
+
+    .all-courses p {
+        display: flex;
+        align-items: flex-end;
+        font-size: 0.9rem;
+        justify-content: space-between;
+        gap: 10px; /* Add spacing between name and date */
+    }
+    
+    .all-courses p span:first-child {
+        flex: 1; /* Allows it to grow but prevents pushing */
+        min-width: 0; /* Prevents unwanted shrinking issues */
+        max-width: 70%; /* Prevents it from pushing the date */
+        word-wrap: break-word;
+        text-align: left; /* Allows wrapping if needed */
+    }
+    
+    .all-courses p span:last-child {
+        flex-shrink: 0; /* Prevents date from being pushed */
+        white-space: nowrap; /* Keeps date on the same line */
+        text-align: right;
+    }
+}

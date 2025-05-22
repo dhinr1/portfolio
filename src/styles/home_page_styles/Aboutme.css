@@ -1,0 +1,104 @@
+.about-me {
+  display: flex;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 30px;
+  margin: auto;
+  position: relative; /* Ensures content doesn't interfere with the background */
+}
+
+.about-me-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Makes the background image cover the entire section */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat;
+  z-index: -1; /* Keeps the background image behind other content */
+  opacity: 0;
+  transition: opacity 2s ease; /* Adds fade-in/fade-out effect */
+}
+
+.about-me-bg-container.fade-in {
+  opacity: 1;
+}
+
+.about-me-bg-container.fade-out {
+  opacity: 0;
+}
+
+.about-me-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Keeps the content above the background */
+}
+
+
+@keyframes pulse1 {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+@keyframes pulse2 {
+  0% {transform: scale(1.2);}
+  50% {transform: scale(1);}
+  100% {transform: scale(1.2);}
+}
+
+.about-me-title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 60px;
+  font-weight: 300;
+  color: #1abc9c;
+  font-family: Helvetica, sans-serif;
+  text-shadow: 
+    0 1px 1px rgba(0, 0, 0, 0.05),
+    0 2px 2px rgba(0, 0, 0, 0.04);
+}
+
+.about-me-text-container {
+  border-radius: 20px;
+  background-color: #ffe2e0;
+  max-width: 900px;
+  padding: 20px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1),
+              inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 35px;
+  padding: 10px;
+  max-width: 900px;
+  border-radius: 20px;
+  background-color: #ffe2e0;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1),
+              inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container p {
+  color: #565656;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+.contact-highlight {
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-highlight:hover {
+  transform: scale(1.05);
+  color: #1abc9c;
+}
