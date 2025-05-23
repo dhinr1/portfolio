@@ -21,34 +21,29 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0; /* Initially invisible */
-  transition: opacity 4s ease-in-out; /* Smooth fade */
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
 }
 
-/* Fades in */
 .fade-in {
   opacity: 1;
 }
 
-/* Fades out */
 .fade-out {
   opacity: 0;
 }
 
-
-/* Profile Image Container */
 .hero-image-container {
   width: 40%;
-  z-index: 1; /* Ensure the profile image stays on top of the background */
+  z-index: 1;
   padding-left: 70px;
 }
 
-/* Profile Image Styles */
 img {
   object-fit: cover;
   border-radius: 50%;
   border: solid white 10px;
-  width: 70%; /* Ensure the image fills its container */
+  width: 70%;
   min-width: 300px;
   transition: transform 0.1s ease-in-out;
 }
@@ -58,7 +53,6 @@ img:hover {
   transform: scale(1.03);
 }
 
-/* Hero Text */
 .hero-heading {
   font-size: 4rem;
   padding: 0;
@@ -90,7 +84,6 @@ img:hover {
   font-family: Helvetica, sans-serif !important;
 }
 
-/* Buttons */
 .first-button {
   background-color: #1abc9c;
   border: solid #1abc9c 3px;
@@ -104,7 +97,7 @@ img:hover {
   background-color: #4ed1b2;
   border: solid #4ed1b2 3px;
   transform: scale(1.1);
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
 }
 
 .second-button {
@@ -120,7 +113,7 @@ img:hover {
   background-color: #4ed1b2;
   border: solid #4ed1b2 3px;
   transform: scale(1.1);
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
 }
 
 .hero-text-container {
@@ -143,7 +136,7 @@ img:hover {
     align-items: center;
     justify-content: center;
     width: 40%;
-    z-index: 1; /* Ensure the profile image stays on top of the background */
+    z-index: 1;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -158,7 +151,7 @@ img:hover {
     object-fit: cover;
     border-radius: 50%;
     border: solid white 10px;
-    width: 70%; /* Ensure the image fills its container */
+    width: 70%;
     min-width: 250px;
     transition: transform 0.1s ease-in-out;
   }
@@ -246,15 +239,15 @@ img:hover {
   
 
   .buttons-container {
-    flex-direction: column; /* Stack the buttons vertically */
-    align-items: center; /* Center the buttons */
-    gap: 10px; /* Adjust the gap between buttons */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 40px;
   }
 
   .first-button,
   .second-button {
-    width: 100%; /* Make the buttons take up full width on small screens */
-    max-width: 300px; /* Optional: Limit the maximum width */
+    width: 100%;
+    max-width: 300px;
   }
 }

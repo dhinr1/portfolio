@@ -17,9 +17,9 @@
 
 .icon-title-container {
     display: flex;
-    align-items: center; /* Vertically aligns icon and title */
-    justify-content: flex-start; /* Aligns them to the left */
-    gap: 10px; /* Space between the icon and the title */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
@@ -27,7 +27,7 @@
     width: auto;
     height: auto;
     display: flex;
-    align-items: center; /* Vertically centers the icon in the container */
+    align-items: center;
     justify-content: center;
 }
 
@@ -46,7 +46,7 @@ h3 {
     color: #565656 !important;
     font-size: 2rem;
     font-weight: 600;
-    margin: 0; /* Removes any default margin */
+    margin: 0;
 }
 
 p {
@@ -59,8 +59,8 @@ p {
 @media (max-width: 991.98px) {
 
     .skillcard:hover {
-        transform: none; /* Disable scaling on hover */
-        box-shadow: none; /* Disable box-shadow on hover */
+        transform: none;
+        box-shadow: none;
     }
 
     .skillcard:hover {

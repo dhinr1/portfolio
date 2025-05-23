@@ -52,7 +52,8 @@ const AboutMe = () => {
 
           <h1 className="about-me-title">About me</h1>
           <div className="about-me-text-container">
-            <p>Hi, I’m Your Name, a passionate software developer with expertise in Python, JavaScript, HTML and CSS. I love building intuitive and responsive web applications that provide meaningful user experiences. Whether it's crafting interfaces or solving problems, I’m excited about using technology to make an impact. Outside of coding, I enjoy [hobby], exploring new tech, and constantly learning. and more text.</p>
+            <p>I'm a self-taught developer with a growing passion for building things that work, feel, and look great. Over the past year, I’ve been diving deep into personal projects across web development (both front-end and back-end), app development, and the basics of machine learning.
+               Whether I’m creating smooth user interfaces, exploring what’s possible with data, or working with automation tools, I love experimenting and learning through building. I'm now looking for an opportunity to grow my skills in a professional environment.</p>
 
           </div>
           <section className="contact-section" id="contact">
